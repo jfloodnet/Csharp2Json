@@ -1,4 +1,5 @@
 ﻿using csharp2json;
+using Newtonsoft.Json;
 using Ploeh.AutoFixture;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Hosting;
 using Xunit;
+using Should;
 
 namespace Test
 {
@@ -36,6 +38,8 @@ namespace Test
 
             var type = Types.From(Source.VALID_CLASS1).First();
             var instance = JsonConvert.DeserializeObject(json, type);
+
+            instance.GetType().Name.ShouldEqual("Test1");
         }
     }
 }
