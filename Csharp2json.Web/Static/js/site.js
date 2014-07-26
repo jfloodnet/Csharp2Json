@@ -1,6 +1,7 @@
 ﻿$(function () {
     $('#generate').click(function () {
         clearErrors();
+        $('#generated-json').hide();
 
         post($('#csharp').val())
             .done(function (json) {
