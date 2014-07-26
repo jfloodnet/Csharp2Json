@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Nancy;
+using Nancy.ModelBinding;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
-using System.Web.ModelBinding;
 
 namespace Csharp2json.Web
 {
