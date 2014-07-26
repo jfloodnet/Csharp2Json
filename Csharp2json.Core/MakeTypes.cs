@@ -3,18 +3,19 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace csharp2json
+namespace Csharp2json.Core
 {
-    public static class Types
+    public static class MakeTypes
     {
         public static Type[] From(string source)
         {
-            CodeDomProvider codeProvider = new CSharpCodeProvider();            
+            CodeDomProvider codeProvider = new CSharpCodeProvider();
 
             CompilerParameters parameters = new CompilerParameters();
-            
+
             parameters.GenerateInMemory = true;
             parameters.GenerateExecutable = false;
             parameters.IncludeDebugInformation = false;
@@ -26,7 +27,7 @@ namespace csharp2json
                 throw new TypeGeneratorException(results.Errors);
             }
 
-            return results.CompiledAssembly.GetTypes();           
+            return results.CompiledAssembly.GetTypes();
         }
     }
 

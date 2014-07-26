@@ -1,0 +1,90 @@
+﻿<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>csharp2json - generate json from csharp classes </title>
+    <meta name="keywords" content="json, c#, csharp, convert, generate">
+    <meta name="description" content="generate c# classes from a json string or url">
+    <meta name="author" content="Joseph Flood">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/site.css" rel="stylesheet">
+    <link href="static/css/prettify.css" type="text/css" rel="stylesheet" />
+
+		<script type="text/javascript" src="http://use.typekit.com/ykr5uof.js"></script>
+		<script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/prettify.js"></script>
+    <script type="text/javascript" src="static/js/site.js"></script>
+    <script type="text/javascript">
+<!--google tracking-->
+    </script>
+  </head>
+<body>
+    <div id="content">
+    <div class="container">
+	<div class="row header">
+		<div class="span6">
+			<h1>
+				csharp2json <small>generate json from c# classes</small>
+			</h1>
+		</div>
+		<div class="span6 right">
+			<p>
+				developed by <a href="http://jflood.net">Joseph Flood</a></p>
+			<p>
+				with thanks to the <a href="http://jsonclassgenerator.codeplex.com/">JSON C# Class Generator</a> project</p>
+			<p>
+				and James Newton-King's <a href="http://json.codeplex.com">Json.NET</a></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span12">
+			<textarea id="csharp" rows="10" placeholder="Enter JSON or a URL to JSON"></textarea>
+		</div>
+	</div>
+    <div class="row">
+        <div class="span7">
+            <button id="generate" class="btn primary large"> Generate</button>
+            <img id="loading" style="display: none;" src="/static/images/ajaxload.gif" alt="loading" />
+            <!-- <button id="show-options" class="btn large">Options</button> -->
+            <span id="no-json" class="help-inline" style="display: none;">Feed me { some json }, Seymour!</span>
+        </div>
+        <div class="span5 right">
+            <button class="btn large" id="show-about" rel="twipsy" title="about / info">?</button>
+            <button class="btn large" id="show-feedback" rel="twipsy" title="i love feedback!">!</button>
+            <a class="btn large" href="" rel="twipsy" title="contact me directly"></a>
+        </div>
+    </div>
+
+	<div id="generated-json" class="row" style="display: none;">
+		<div class="span12">
+			<div class="alert-message block-message">
+				<a class="close" rel="close" href="#" data-parent-id="generated-classes">x</a>
+				<pre class="prettyprint" id="json">{ code }</pre>
+				<textarea id="copyCode" style="display: none;"></textarea>
+				<a href="#" class="btn small" rel="close" data-parent-id="generated-classes">Close</a>
+				<a href="#" class="btn small" id="copy">Copy</a>
+				<span class="help-inline" id="copyHelp" style="display: none;">press CTRL+C now to copy this code to your clipboard</span>
+			</div>
+		</div>
+	</div>
+	<div id="compile-error" class="row" style="display: none;">
+		<div class="span12">
+			<div class="alert-message warning">
+				<a class="close" rel="close" href="#" data-parent-id="compile-error">x</a>
+							
+			</div>
+		</div>
+	</div>	
+</div>
+	
+
+
+    </div>
+</body>
+</html>
