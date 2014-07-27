@@ -8,9 +8,6 @@ pre.prettyprint { border: 0px !important; background-color: #e6e6e6; font-size: 
 #about { font-size: 16px; }
 #copyCode { width: 92%; overflow: hidden; margin-bottom: 15px; }
 
-.twipsy-inner { background-color: #999; }
-.twipsy-arrow { border-bottom-color: #999 !important; }
-
 .alert-message.block-message { background-color: #e6e6e6; border-color: #ccc; border-radius: 10px; }
 
 .about-section { width: 90%; margin: 0px 15px 0px 15px; }
