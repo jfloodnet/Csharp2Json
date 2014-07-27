@@ -90,7 +90,6 @@
     <Compile Include="BodyAsStringModelBinder.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="IndexModule.cs" />
-    <Compile Include="NullErrorHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

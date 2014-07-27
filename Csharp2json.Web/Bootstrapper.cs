@@ -17,16 +17,5 @@
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("Static", @"Static"));
             base.ConfigureConventions(nancyConventions);
         }
-
-        protected override NancyInternalConfiguration InternalConfiguration
-        {
-            get
-            {
-                return NancyInternalConfiguration.WithOverrides(
-                    builder => builder.StatusCodeHandlers = new List<Type>() {
-                typeof(NullErrorHandler)
-            });
-            }
-        }
     }
 }
