@@ -11,6 +11,7 @@
     using Ploeh.AutoFixture.Kernel;
     using System.Linq;
     using Csharp2json.Core;
+    using Newtonsoft.Json;
 
     public class IndexModule : NancyModule
     {

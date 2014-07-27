@@ -1,7 +1,10 @@
 ﻿namespace Csharp2json.Web
 {
     using Nancy;
+    using Nancy.Bootstrapper;
     using Nancy.Conventions;
+    using System;
+    using System.Collections.Generic;
 
     public class Bootstrapper : DefaultNancyBootstrapper
     {
@@ -13,6 +16,17 @@
         {
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("Static", @"Static"));
             base.ConfigureConventions(nancyConventions);
+        }
+
+        protected override NancyInternalConfiguration InternalConfiguration
+        {
+            get
+            {
+                return NancyInternalConfiguration.WithOverrides(
+                    builder => builder.StatusCodeHandlers = new List<Type>() {
+                typeof(NullErrorHandler)
+            });
+            }
         }
     }
 }
