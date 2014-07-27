@@ -77,7 +77,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\nancy-logo.png" />
     <Content Include="Static\css\bootstrap.min.css" />
     <Content Include="Static\css\prettify.css" />
     <Content Include="Static\css\site.css" />
@@ -107,6 +106,9 @@
       <Project>{daf662cb-a927-4836-8dbe-9b3aacd3a9d1}</Project>
       <Name>Csharp2json.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
